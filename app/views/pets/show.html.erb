@@ -1,0 +1,18 @@
+<p>
+  <b>Status:</b>
+  <%=h @pet.status %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @pet.name %>
+</p>
+
+<p>
+  <b>Lastseen:</b>
+  <%=h @pet.lastseen %>
+</p>
+
+
+<%= link_to 'Edit', edit_pet_path(@pet) %> |
+<%= link_to 'Back', pets_path %>
