@@ -6,7 +6,7 @@
 # no regular words or you'll be exposed to dictionary attacks.
 ActionController::Base.session = {
   :key         => '_petfinder_session',
-  :secret      => 'da53f678edd92fc5a9c0c82d81ded81e2973be0d081b5d31123b3ba33a18e3724a394e6210a13233f61e61ec464adf53d74127cfe4d7233933f7dd4c1b7ccb9c'
+  :secret      => 'f77910f8804a259c799808a626217867168962dc4108e90bf596d6baf54915b77e345e389276155c9ffe2c3189a0c87a3b83a592169bae5870238790a3dc8339'
 }
 
 # Use the database for sessions instead of the cookie-based default,
