@@ -46,10 +46,10 @@ class PetsController < ApplicationController
       if @pet.save
         flash[:notice] = 'Pet was successfully created.'
         format.html { redirect_to(@pet) }
-        format.xml  { render :xml => @pet, :status => :created, :location => @pet }
+        format.xml  { render :xml => @pet, :lost => :created, :location => @pet }
       else
         format.html { render :action => "new" }
-        format.xml  { render :xml => @pet.errors, :status => :unprocessable_entity }
+        format.xml  { render :xml => @pet.errors, :lost => :unprocessable_entity }
       end
     end
   end
@@ -66,7 +66,7 @@ class PetsController < ApplicationController
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
-        format.xml  { render :xml => @pet.errors, :status => :unprocessable_entity }
+        format.xml  { render :xml => @pet.errors, :lost => :unprocessable_entity }
       end
     end
   end

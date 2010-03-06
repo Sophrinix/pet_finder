@@ -2,14 +2,14 @@
 
 <table>
   <tr>
-    <th>Status</th>
+    <th>Missing</th>
     <th>Name</th>
     <th>Lastseen</th>
   </tr>
 
 <% @pets.each do |pet| %>
   <tr>
-    <td><%=h pet.status %></td>
+    <td><%=h pet.missing %></td>
     <td><%=h pet.name %></td>
     <td><%=h pet.lastseen %></td>
     <td><%= link_to 'Show', pet %></td>
