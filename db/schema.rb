@@ -9,10 +9,10 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100306044600) do
+ActiveRecord::Schema.define(:version => 20100306063418) do
 
   create_table "pets", :force => true do |t|
-    t.boolean  "status"
+    t.boolean  "missing"
     t.string   "name"
     t.date     "lastseen"
     t.datetime "created_at"
