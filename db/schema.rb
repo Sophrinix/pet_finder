@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100306063418) do
+ActiveRecord::Schema.define(:version => 20100308061125) do
 
   create_table "pets", :force => true do |t|
     t.boolean  "missing"
@@ -21,10 +21,12 @@ ActiveRecord::Schema.define(:version => 20100306063418) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "name"
+    t.string   "username"
     t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "password_salt"
+    t.string   "password_hash"
   end
 
 end
