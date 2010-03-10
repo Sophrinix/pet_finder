@@ -1,3 +1,13 @@
-<div id="user_nav">
-    <%= link_to "Register", new_user_path %>
-</div>
+<div id="user_nav">  
+    <% if current_user %>  
+        <%= link_to "Edit profile", edit_user_path(:current) %>  
+        <%= link_to "Logout", logout_path %>  
+    <% else %>  
+        <%= link_to "Register", new_user_path %>  
+        <%= link_to "Log in", login_path %>  
+    <% end %>  
+</div>  
+<p>
+<h2> hello from the application template </h2>
+<%= yield %>
+<h3> foot from app template </h3>
