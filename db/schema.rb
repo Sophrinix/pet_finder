@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100310041509) do
+ActiveRecord::Schema.define(:version => 20100312031932) do
 
   create_table "pets", :force => true do |t|
     t.boolean  "missing"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(:version => 20100310041509) do
     t.string   "crypted_password"
     t.string   "password_salt"
     t.string   "persistence_token"
+    t.boolean  "admin"
   end
 
 end
