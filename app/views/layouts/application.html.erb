@@ -10,7 +10,7 @@
     <body>
         <div id="user_nav">  
             <% if current_user %>  
-                <%= link_to "Edit profile", edit_user_path(:current) %>  
+                <%= link_to "My Account", edit_user_path(:current) %>  
                 <%= link_to "Logout", logout_path %>  
             <% else %>  
                 <%= link_to "Register", new_user_path %>  
@@ -23,6 +23,8 @@
         <p>
         <h2> Pet Finder [beta] </h2>
         <%= yield %>
-        <h3> All rights reserved </h3>
+        <div id="footer">
+            &copy;Daniel Schobel 2010 
+        </div>
     </body>
 </html>

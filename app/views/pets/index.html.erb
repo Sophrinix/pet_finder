@@ -7,6 +7,7 @@
     <th>Lastseen</th>
   </tr>
 
+<h2> All  </h2>
 <% @pets.each do |pet| %>
   <tr>
     <td><%=h pet.missing %></td>
@@ -15,6 +16,23 @@
     <td><%= link_to 'Show', pet %></td>
     <td><%= link_to 'Edit', edit_pet_path(pet) %></td>
     <td><%= link_to 'Destroy', pet, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+
+
+</table>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Last seen</th>
+  </tr>
+<h2> Missing </h2>
+<% @missing.each do |pet| %>
+  <tr>
+    <td><%=h pet.name %></td>
+    <td><%=h pet.lastseen %></td>
+    <td><%= link_to 'Show', pet %></td>
+    <td><%= link_to 'Edit', edit_pet_path(pet) %></td>
   </tr>
 <% end %>
 </table>

@@ -3,6 +3,7 @@ class PetsController < ApplicationController
   # GET /pets.xml
   def index
     @pets = Pet.all
+    @missing = Pet.find :all, :conditions => {:missing => true}
 
     respond_to do |format|
       format.html # index.html.erb
@@ -44,7 +45,7 @@ class PetsController < ApplicationController
 
     respond_to do |format|
       if @pet.save
-        flash[:notice] = 'Pet was successfully created.'
+        flash[:notice] = 'Pet was successfully added to system.'
         format.html { redirect_to(@pet) }
         format.xml  { render :xml => @pet, :lost => :created, :location => @pet }
       else
