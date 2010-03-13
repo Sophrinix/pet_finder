@@ -1,0 +1,22 @@
+%h1 Editing pet
+
+- form_for(@pet) do |f|
+  = f.error_messages 
+
+  %p
+    = f.label :name 
+    %br
+    = f.text_field :name
+  %p
+    = f.label :missing 
+    %br
+    = f.check_box :missing 
+  %p
+    = f.label :lastseen 
+    %br 
+    = f.date_select :lastseen
+  %p
+    = f.submit 'Update'
+
+= link_to 'Show', @pet  |
+= link_to 'Back', pets_path

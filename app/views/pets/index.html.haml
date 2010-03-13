@@ -1,0 +1,32 @@
+%h1 Listing pets
+
+%table
+  %tr
+    %th Missing
+    %th Name
+    %th Lastseen
+
+  %h2 All
+  - @pets.each do |pet|
+    %tr
+      %td= h pet.missing 
+      %td= h pet.name 
+      %td= h pet.lastseen 
+      %td= link_to 'Show', pet 
+      %td= link_to 'Edit', edit_pet_path(pet) 
+      %td= link_to 'Destroy', pet, :confirm => 'Are you sure?', :method => :delete 
+
+
+%table
+  %tr
+    %th Name
+    %th Last seen
+  %h2 Missing
+  - @missing.each do |pet|
+    %tr
+    %td=h pet.name
+    %td=h pet.lastseen
+    %td= link_to 'Show', pet
+    %td= link_to 'Edit', edit_pet_path(pet)
+%br
+= link_to 'New pet', new_pet_path 

@@ -1,0 +1,14 @@
+%p
+  %b Missing:
+  =h @pet.missing
+
+%p
+  %b Name:
+  =h @pet.name
+
+%p
+  %b Lastseen:
+  =h @pet.lastseen
+
+= link_to 'Edit', edit_pet_path(@pet)  |
+= link_to 'Back', pets_path 
