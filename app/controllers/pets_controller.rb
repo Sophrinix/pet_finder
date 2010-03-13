@@ -1,4 +1,5 @@
 class PetsController < ApplicationController
+  before_filter :require_user, :only => [:edit, :update, :new, :create, :destroy]
   # GET /pets
   # GET /pets.xml
   def index
