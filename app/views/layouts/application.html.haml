@@ -1,0 +1,34 @@
+!!!
+%html{ "xml:lang" => "en", :lang => "en", :xmlns => "http://www.w3.org/1999/xhtml" }
+  %head
+    %meta{ :content => "text/html;charset=UTF-8", "http-equiv" => "content-type" }
+    %title
+      Pet Finder
+    = stylesheet_link_tag 'blueprint/screen', :media => "screen, projection"
+    = stylesheet_link_tag 'blueprint/print', :media => "print"
+    <!–[if IE]>
+    = stylesheet_link_tag 'blueprint/ie', :media => "screen, projection"
+    <![endif]–>
+  %body
+    .container
+      .span-4
+        \&nbsp;
+      .span-16
+        %h2
+          Pet Finder [alpha]
+      #user_nav.span-4.last
+        - if current_user
+        = link_to "My Account", edit_user_path(:current)
+        = link_to "Logout", logout_path
+        - else
+        = link_to "Register", new_user_path
+        = link_to "Log in", login_path
+      #notice.span-24.last
+        %p{ :style => "color: green" }
+          = flash[:notice]
+      .span-4
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In interdum risus ut lacus semper id laoreet sem gravida. Ut sit amet leo eros. Quisque leo mi, euismod ut venenatis eget, suscipit quis risus. Nullam elit metus, adipiscing ac consectetur pellentesque, hendrerit id lorem. Sed fringilla sapien et ligula tincidunt malesuada.
+      .span-20.last
+        = yield
+      #footer.span-24.last
+        \&copy;Daniel Schobel 2010
